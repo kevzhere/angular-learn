@@ -1,0 +1,10 @@
+<div class='container'>
+  <a routerLink="component-a">child a</a>
+  <a 
+    [routerLink]="['component-b']" 
+    [queryParams]="{name: 'hello_world'}"
+  >
+    child b
+  </a>
+  <router-outlet></router-outlet>
+</div>

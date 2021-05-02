@@ -1,0 +1,12 @@
+<p>Template-driven Form</p>
+<form class='container'>
+  <label>
+    Firstname: {{firstName}}
+    <input name='firstName' type='text' [(ngModel)]='firstName'>
+  </label>
+  <label>
+    Lastname: {{lastName}}
+    <input required minlength="4" name='lastName' type='text' [(ngModel)]='lastName' #last='ngModel'>
+  </label>
+  <button type='submit' [disabled]='last.errors'>submit</button>
+</form>

@@ -1,0 +1,21 @@
+<p>Reactive Form</p>
+<form class='container'>
+  <label>
+    normal: 
+    <input type='text' [formControl]='normal'>
+  </label>
+  {{normal.value}}
+</form>
+
+<form  [formGroup]='formGroup' class='container' (ngSubmit)='onSubmit()'>
+  form group
+  <label>
+    Firstname:
+    <input type='text' formControlName='firstName'>
+  </label>
+  <label>
+    Lastname:
+    <input type='text' formControlName='lastName'>
+  </label>
+  <button type='submit' [disabled]='!formGroup.valid'>submit</button>
+</form>
